@@ -306,18 +306,6 @@ class BleParser:
                             # Jaalee
                             sensor_data = parse_jaalee(self, man_spec_data, mac)
                             break
-                        elif len(man_spec_data_list) == 2:
-                            # Teltonika Eye (can send both iBeacon and Teltonika data in one message)
-                            second_man_spec_data = man_spec_data_list[1]
-                            second_comp_id = (second_man_spec_data[3] << 8) | second_man_spec_data[2]
-                            if second_comp_id == 0x089A:
-                                sensor_data = parse_teltonika(self, second_man_spec_data, local_name, mac)
-                                break
-                        else:
-                            # iBeacon
-                            sensor_data, tracker_data = parse_ibeacon(self, man_spec_data, mac)
-                            uuid = man_spec_data[6:22]
-                            break
                     elif comp_id == 0x00DC and data_len == 0x0E:
                         # Oral-b
                         sensor_data = parse_oral_b(self, man_spec_data, mac)
