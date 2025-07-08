@@ -20,7 +20,7 @@ from .helpers import to_mac, to_unformatted_mac, to_uuid
 from .hhcc import parse_hhcc
 from .holyiot import parse_holyiot
 from .hormann import parse_hormann
-from .ibeacon import parse_ibeacon
+#from .ibeacon import parse_ibeacon
 from .inkbird import parse_inkbird
 from .inode import parse_inode
 from .jaalee import parse_jaalee
@@ -313,8 +313,6 @@ class BleParser:
                                 break
                         else:
                             # iBeacon
-                            sensor_data, tracker_data = parse_ibeacon(self, man_spec_data, mac)
-                            uuid = man_spec_data[6:22]
                             break
                     elif comp_id == 0x00DC and data_len == 0x0E:
                         # Oral-b

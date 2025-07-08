@@ -1891,8 +1891,8 @@ MEASUREMENT_DICT = {
     'LYWSDCGQ'                : [["temperature", "humidity", "battery", "rssi"], [], []],
     'LYWSD02'                 : [["temperature", "humidity", "battery", "rssi"], [], []],
     'LYWSD02MMC'              : [["temperature", "humidity", "battery", "rssi"], [], []],
-    'LYWSD03MMC'              : [["temperature", "humidity", "battery", "voltage", "rssi"], [], []],
-    'XMWSDJ04MMC'             : [["temperature", "humidity", "battery", "rssi"], [], []],
+    'LYWSD03MMC'              : [["temperature", "humidity", "battery"], [], []],
+    'XMWSDJ04MMC'             : [["temperature", "humidity", "battery"], [], []],
     'XMMF01JQD'               : [["rssi"], ["button"], []],
     'HHCCJCY01'               : [["temperature", "moisture", "conductivity", "illuminance", "battery", "rssi"], [], []],
     'GCLS002'                 : [["temperature", "moisture", "conductivity", "illuminance", "rssi"], [], []],
@@ -2009,7 +2009,6 @@ MEASUREMENT_DICT = {
     'iBBQ-4'                  : [["temperature probe 1", "temperature probe 2", "temperature probe 3", "temperature probe 4", "rssi"], [], []],
     'iBBQ-6'                  : [["temperature probe 1", "temperature probe 2", "temperature probe 3", "temperature probe 4", "temperature probe 5", "temperature probe 6", "rssi"], [], []],
     'BEC07-5'                 : [["temperature", "humidity", "rssi"], [], []],
-    'iBeacon'                 : [["rssi", "measured power", "cypress temperature", "cypress humidity"], ["uuid", "mac", "major", "minor"], []],  # mac can be dynamic
     'AltBeacon'               : [["rssi", "measured power"], ["uuid", "mac", "major", "minor"], []],  # mac can be dynamic
     'Air Mentor Pro 2'        : [["temperature", "temperature calibrated", "humidity", "co2", "tvoc", "aqi", "air quality", "pm2.5", "pm10", "rssi"], [], []],
     'Air Mentor 2S'           : [["temperature", "temperature calibrated", "humidity", "co2", "tvoc", "aqi", "formaldehyde", "air quality", "pm2.5", "pm10", "rssi"], [], []],
